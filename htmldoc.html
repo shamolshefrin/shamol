@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shamol PS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar { display: none; }
+    html {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
+    
+    /* Animation classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .slide-in-left.appear {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .slide-in-right.appear {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .scale-in.appear {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Make footer elements visible by default */
+    footer .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-[#C33764] to-[#1D2671] text-white flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-black p-4 shadow-md backdrop-blur">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold">Shamol PS</h1>
+      <button id="menu-button" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+      </ul>
+    </div>
+    <ul id="mobile-menu" class="md:hidden mt-4 px-4 space-y-2 hidden">
+      <li><a href="#home" class="block p-2 bg-white/10 rounded hover:bg-white/20">Home</a></li>
+      <li><a href="#about" class="block p-2 bg-white/10 rounded hover:bg-white/20">About</a></li>
+      <li><a href="#contact" class="block p-2 bg-white/10 rounded hover:bg-white/20">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <main class="flex-grow pt-20">
+
+    <!-- Home Section -->
+    <section id="home" class="h-screen flex items-center justify-center px-4 text-center">
+      <div class="bg-white text-black w-full md:w-2/5 rounded-2xl px-10 py-12 text-xl md:text-3xl font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:text-white hover:bg-black hover:shadow-2xl hover:shadow-blue-500/50 scale-in">
+        <h1 class="leading-snug">
+          Hello, I'm 
+          <span class="text-blue-600 hover:text-white transition duration-200">Shamol PS</span>
+        </h1>
+        <p class="text-base md:text-lg mt-3 font-medium text-gray-700 hover:text-gray-200 transition duration-200 fade-in">
+          Digital Marketing Executive | Growth Strategist | Brand Storyteller
+        </p>
+        <p class="text-sm md:text-base mt-4 font-normal text-gray-600 hover:text-gray-300 transition duration-200 fade-in">
+          I help businesses grow by crafting data-driven marketing campaigns, optimizing digital presence, and building authentic brand connections. With experience across SEO, SEM, social media, and content marketing, I turn ideas into impactful strategies.
+        </p>
+        <div class="mt-6 fade-in">
+          <a href="#contact" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="h-screen w-full bg-white text-gray-800 flex items-center justify-center px-6">
+      <div class="flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full">
+        
+        <!-- Image -->
+        <div class="w-72 h-72 bg-white rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/50 transition duration-300 overflow-hidden slide-in-left">
+          <img src="./shamol.png" alt="Shamol" class="w-full h-full object-cover rounded-lg" />
+        </div>
+
+        <!-- Text -->
+        <div class="text-center md:text-left max-w-xl">
+          <h2 class="text-3xl font-bold slide-in-right">Leading Digital Marketing Executive</h2>
+          <p class="mt-4 text-lg text-gray-600 fade-in">
+            SEO Analyst specializing in eCommerce product listings and optimization.<br>
+            1+ years of experience in campaign strategy, content marketing, and brand growth.
+          </p>
+          <div class="mt-6 italic text-gray-500 space-y-2 text-sm">
+            <p class="fade-in">"Content is fire, social media is gasoline."</p>
+            <p class="fade-in">"Great marketing makes the customer feel smart."</p>
+            <p class="fade-in">"Your competitor is only one mouse click away."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Let's Connect</h2>
+      <p class="text-lg text-gray-600 max-w-xl fade-in">
+        Whether you need SEO insights, digital strategy, or eCommerce listing support — I'm just a message away.
+      </p>
+      <div class="mt-6 italic text-gray-500 space-y-2 text-sm">
+        <p class="fade-in">"Marketing is no longer about the stuff you make, but the stories you tell." – Seth Godin</p>
+        <p class="fade-in">"Your brand is a story unfolding across all customer touch points." – Jonah Sachs</p>
+        <p class="fade-in">"Success is not just about traffic, it's about value." – Unknown</p>
+      </div>
+      <div class="mt-8 fade-in">
+        <a href="https://in.linkedin.com/in/shamol-ps-17b69a327" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p class="fade-in">&copy; <span id="year"></span> Shamol PS. All rights reserved.</p>
+    <div class="mt-2 space-x-4 text-sm">
+      <a href="tel:+918129088712" class="hover:text-blue-400 fade-in">Phone</a>
+      <a href="https://www.instagram.com/shamollllllll?igsh=MTB3dHlzMWd0c3huNw==" target="_blank" class="hover:text-pink-500 fade-in">Instagram</a>
+      <a href="https://wa.me/8129088712" target="_blank" class="hover:text-green-500 fade-in">WhatsApp</a>
+      <a href="https://in.linkedin.com/in/shamol-ps-17b69a327" target="_blank" class="hover:text-blue-600 fade-in">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('menu-button').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for scroll animations with reverse effect
+    const fadeElements = document.querySelectorAll('.fade-in:not(footer .fade-in), .slide-in-left, .slide-in-right, .scale-in');
+    
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    
+    const appearOnScroll = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        } else {
+          // Only remove the 'appear' class if we're scrolling up (reversing animation)
+          if (window.scrollY < entry.boundingClientRect.top + window.scrollY) {
+            entry.target.classList.remove('appear');
+          }
+        }
+      });
+    }, appearOptions);
+
+    fadeElements.forEach(element => {
+      appearOnScroll.observe(element);
+    });
+
+    // Track scroll direction
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      lastScrollY = currentScrollY;
+    });
+  </script>
+</body>
+</html>
