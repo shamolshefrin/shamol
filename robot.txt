@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shamolshefrin.github.io/shamol/sitemap.xml
